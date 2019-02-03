@@ -199,7 +199,7 @@
 
     // Global sprintf replacement. To keep old version define PRINTEX_NO_SPRINTF (does not affect x.printf();)
     #ifndef PRINTEX_NO_SPRINTF
-        #define sprintf(buff, str, ...) (*(buff + GString(buff).printf(str, __VA_ARGS__)) = 0;)
+        #define sprintf(buff, str, ...) {*(buff + GString(buff).printf(str, __VA_ARGS__)) = 0;}
         #define xprintf(out, str, ...) PrintEx(out).PRINTF_ALIAS(str, __VA_ARGS__)
     #endif
 
