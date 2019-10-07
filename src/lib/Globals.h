@@ -24,6 +24,11 @@
 #ifndef HEADER_GLOBALS
     #define HEADER_GLOBALS
 
+	/***
+		Platform specific configurations.
+		Do not modify the contents below.
+	***/
+
     /*** Arduino Zero specific ***/
     #ifdef ARDUINO_SAMD_ZERO //ARDUINO_ARCH_SAMD
         #include <cstdarg>
@@ -43,7 +48,10 @@
 
     /*** Non AVR boards ***/
     #ifndef __AVR__
-        #define PRINTF_NO_PROGMEM
+        /*** An exception for ESP8266 boards. ***/
+        #ifndef ARDUINO_ARCH_ESP8266
+            #define PRINTF_NO_PROGMEM
+        #endif
         #define PRINTF_NO_EEPROM
     #endif
 
