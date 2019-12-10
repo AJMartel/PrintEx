@@ -23,7 +23,7 @@
 #ifndef PRINTEX_H
 #define PRINTEX_H
 
-#define PRINTEX_VERSION        10200
+#define PRINTEX_VERSION        20000
 
 #include "lib/MemoryPrinter.h"
 #include "lib/StreamExtension.h"
