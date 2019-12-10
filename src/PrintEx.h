@@ -20,6 +20,8 @@
         conjunction with them.
 
 ********************************************************************************/
+#ifndef PRINTEX_H
+#define PRINTEX_H
 
 #define PRINTEX_VERSION        10200
 
@@ -69,4 +71,5 @@
             StreamEx streamer = stream;
             return streamer >> data, stream;
     }
+#endif
 #endif
